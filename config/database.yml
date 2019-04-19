@@ -9,9 +9,11 @@ default: &default
   encoding: utf8
   pool: 5
   timeout: 5000
-  host: localhost
-  username: user123
-  password: password123
+  database: ENV["DB_NAME"]
+  host: ENV["DB_HOST"]
+  port: ENV["DB_PORT"]
+  username: ENV["DB_USER"]
+  password: ENV["DB_PASSWORD"]
 
 development:
   <<: *default
