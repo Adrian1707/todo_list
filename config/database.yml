@@ -9,11 +9,11 @@ default: &default
   encoding: utf8
   pool: 5
   timeout: 5000
-  database: ENV["DB_NAME"]
-  host: ENV["DB_HOST"]
-  port: ENV["DB_PORT"]
-  username: ENV["DB_USER"]
-  password: ENV["DB_PASSWORD"]
+  database: <%= ENV["DB_NAME"] %>
+  host: <%= ENV["DB_HOST"] %>
+  port: <%= ENV["DB_PORT"] %>
+  username: <%= ENV["DB_USER"] %>
+  password: <%= ENV["DB_PASSWORD"] %>
 
 development:
   <<: *default
